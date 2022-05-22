@@ -1,16 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./components/App";
 
-function Home() {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-}
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
-  return <Home />;
-}
+/* add the NavBar component to our App component */
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
